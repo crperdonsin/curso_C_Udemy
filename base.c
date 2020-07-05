@@ -2,11 +2,22 @@
 #include <stdlib.h>//Biblioteca de operações matematicas;
 #include <locale.h>//Para usar acentos;
 
-void main(){
+void retornasucessor(int numero);
+int retornaantecesor(int numero);
+
+int main(){
     setlocale(LC_ALL, "portuguese");//Função para usar acentos;
-    // Imprima os numeros pares de 10 a 20
-    // usando while, do while e for
-    int i = 10;
+    int a;
 
-
+    printf("Digite um Número");
+    scanf("%d", &a);
+    retornasucessor(a);
+    printf("\nO Antecessor de %d é %d \n", a, retornaantecesor(a));
+return 0;
+}
+void retornasucessor(int numero){
+        printf("\nO Sucessor de %d é %d", numero, numero+1);
+}
+int retornaantecesor(int numero){
+    return numero-1;
 }
