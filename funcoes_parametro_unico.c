@@ -7,6 +7,9 @@ int retornaantecesor(int numero); // Exemplo de função com retorno
 //Funçoes com mais de um parametro
 void mostrasoma(int valor1, int valor2);
 int retornasoma(int valor1, int valor2);
+//Ponteiro como referencia
+void aumenta10 (int *pont);
+
 int main(){
     setlocale(LC_ALL, "portuguese");//Função para usar acentos;
     int a, b=10;
@@ -19,6 +22,8 @@ int main(){
     mostrasoma(a,b);
     printf("\nFunção Int");
     printf("\nA Soma entre %d e %d é %d", a, b, retornasoma(a,b));
+    aumenta10(&a);
+    printf("\n%d", a);
 return 0;
 }
 
@@ -35,4 +40,8 @@ void mostrasoma(int valor1, int valor2){
 }
 int retornasoma(int valor1, int valor2){
     return valor1+valor2;
+}
+//Ponteiro como referencia
+void aumenta10 (int *pont){
+    *pont = *pont + 10;
 }
